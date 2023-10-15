@@ -41,7 +41,9 @@ tasks:
     init: |
       if test ! -e "pubspec.yaml"; then {
         rm -f /workspace/.template_init
-        flutter create --project-name gitpod_flutter_quickstart .
+        git clone https://github.com/zainkhanbaloch/flutter_demo_app.git
+        cd flutter_demo_app
+        #flutter create --project-name gitpod_flutter_quickstart .
       } fi
       flutter build -v linux
       flutter build -v web
